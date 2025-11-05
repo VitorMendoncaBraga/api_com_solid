@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-node@v6 # configura o node
         with:
           node-version: 24
-      - run: npm ci # instala dependencias sem atualizar versoes e nem tem interacao com o usuario
-      - run: npm test
+      - run: pnpm ci # instala dependencias sem atualizar versoes e nem tem interacao com o usuario
+      - run: pnpm test
