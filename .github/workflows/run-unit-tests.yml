@@ -1,0 +1,17 @@
+name: Run Unit Tests
+
+on: [push]
+
+jobs: 
+  run-unit-tests:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v5 # baixa o codigo na maquina
+      - uses: actions/setup-node@v6 # configura o node
+        with:
+          node-version: 24
+          cache: 'pnpm'
+      - run: pnpm ci # instala dependencias sem atualizar versoes e nem tem interacao com o usuario
+      - run: pnpm test
