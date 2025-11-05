@@ -19,7 +19,7 @@ jobs:
 
       # Agora este comando vai funcionar
       - name: Run pnpm ci
-        run: pnpm ci
+        run: pnpm install --frozen-lockfile  # nn existe o pnpm ci ainda
 
       - name: Run pnpm test
         run: pnpm test
