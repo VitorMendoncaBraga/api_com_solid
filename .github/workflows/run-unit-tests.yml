@@ -12,6 +12,5 @@ jobs:
       - uses: actions/setup-node@v6 # configura o node
         with:
           node-version: 24
-          cache: 'npm'
       - run: npm ci # instala dependencias sem atualizar versoes e nem tem interacao com o usuario
       - run: npm test
